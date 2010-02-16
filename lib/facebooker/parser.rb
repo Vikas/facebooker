@@ -492,7 +492,7 @@ module Facebooker
 
   class EventsEdit < Parser#:nodoc:
     def self.process(data)
-      element('events_edit_response', data).text_value
+      element('events_edit_response', data).content.strip
     end
   end
   
